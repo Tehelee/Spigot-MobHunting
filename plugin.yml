@@ -1,0 +1,30 @@
+name: MobHunting
+main: com.tehelee.mobHunting.Main
+version: 1.10.2.3
+softdepend: [WorldGuard]
+
+commands:
+  mobhunting:
+    usage: /mobhunting
+    aliases: [mh, mobhunt]
+
+permissions:
+  permissions.mobHunting.*:
+    description: Gives access to all Mob Hunt commands
+    default: op
+    children:
+      permissions.mobHunting.custom: true
+      permissions.mobHunting.heads: true
+      permissions.mobHunting.reload: true
+  permissions.mobHunting.custom:
+    description: Allows the modification of custom mobs
+    default: op
+  permissions.mobHunting.heads:
+    description: Allows the user to spawn all mob heads, and their player head
+    default: op
+  permissions.mobHunting.reload:
+    description: Allows the user to reload the config file
+    default: op
+  permissions.mobHunting.region:
+    description: Allows the user to define mob hunter regions
+    default: op
